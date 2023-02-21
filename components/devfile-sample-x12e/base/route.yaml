@@ -1,0 +1,21 @@
+apiVersion: route.openshift.io/v1
+kind: Route
+metadata:
+  creationTimestamp: null
+  labels:
+    app.kubernetes.io/created-by: application-service
+    app.kubernetes.io/instance: devfile-sample-x12e
+    app.kubernetes.io/managed-by: kustomize
+    app.kubernetes.io/name: devfile-sample-x12e
+    app.kubernetes.io/part-of: my-app-1
+  name: devfile-sample-x12e
+  namespace: karthik-jk-tenant
+spec:
+  path: /
+  port:
+    targetPort: 3001
+  to:
+    kind: Service
+    name: devfile-sample-x12e
+    weight: null
+status: {}
